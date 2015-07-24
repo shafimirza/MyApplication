@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical">
+    <TableLayout
+        android:id="@+id/tableLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:shrinkColumns="*"
+        android:stretchColumns="*"
+        android:layout_gravity="fill"
+        >
+
+        <TableRow
+            android:id="@+id/tableRow2"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+            <TableRow android:weightSum="1">
+            <TextView
+                android:id="@+id/TaskNo"
+                android:text="Room No."
+                android:layout_column="0"
+                android:typeface="serif"
+                android:textSize="13dp"
+                android:textStyle="bold"
+                android:textAllCaps="true"
+                android:layout_width="wrap_content"
+                android:layout_weight="0.26"></TextView>
+
+                <TextView
+                    android:id="@+id/Task"
+                    android:text="Room No."
+                    android:layout_column="0"
+                    android:typeface="serif"
+                    android:textSize="13dp"
+                    android:textStyle="bold"
+                    android:textAllCaps="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"></TextView>
+
+            </TableRow>
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:id="@+id/Description"
+                android:text="Room No."
+                android:layout_column="0"
+                android:textSize="13dp"
+                android:textStyle="bold"
+                android:textAllCaps="true"></TextView>
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:id="@+id/Time"
+                android:text="Room No."
+                android:layout_column="0"
+                android:textSize="13dp"
+                android:textStyle="bold"
+                android:textAllCaps="true"></TextView>
+        </TableRow>
+</TableLayout>
+</RelativeLayout>

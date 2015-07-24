@@ -1,0 +1,181 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.econolodge.econolodgeapp3.CreateUserFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dip"
+            android:paddingTop="20dp"
+            >
+            <TextView
+                android:id="@+id/register_error"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dip"
+                android:textColor="#e30000"
+                android:textStyle="bold" />
+
+            <!-- Name Label -->
+
+            <!-- Name TextField -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <EditText
+                    android:id="@+id/fName"
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:hint="First Name"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                    android:maxLines="1"/>
+                <EditText
+                    android:id="@+id/lName"
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:hint="Last Name"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/address"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="Address"
+                android:maxLines="1"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <EditText
+                    android:id="@+id/city"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:hint="City"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small" />
+                <EditText
+                    android:id="@+id/state"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:prompt="@string/state"
+                    android:hint="State"
+                    android:maxLines="1"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"/>
+
+                <EditText
+                    android:id="@+id/zip"
+                    android:layout_width="170dp"
+                    android:maxLines="1"
+                    android:layout_height="wrap_content"
+                    android:hint="Zip"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small" />
+
+            </LinearLayout>
+            <EditText
+                android:id="@+id/phone"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:inputType="phone"
+                android:hint="Pnone No."
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small" />
+
+            <!-- Email Label -->
+            <!-- Email TextField -->
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:ems="10"
+                android:id="@+id/registerEmail"
+                android:hint="Email ID"
+                android:maxLines="1"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"/>
+            <EditText
+                android:id="@+id/txtDate"
+                android:ems="10"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="BirthDate"
+                android:maxLines="1"
+                android:onClick="selectdate"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small" />
+            <EditText
+                android:id="@+id/leavingDate"
+                android:ems="10"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="LeaveDate"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small" />
+            <EditText
+                android:id="@+id/hirDate"
+                android:ems="10"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" android:hint="HireDate"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <EditText
+                    android:id="@+id/ssn"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:hint="SSN"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small" />
+                <Spinner
+                    android:id="@+id/activespinner"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/Active"
+                    android:prompt="@string/active"/>
+                <Spinner
+                    android:id="@+id/positionspinner"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/EmployeePosition"
+                    android:prompt="@string/position"/>
+            </LinearLayout>
+            <EditText
+                android:id="@+id/userid"
+                android:layout_width="fill_parent"
+                android:maxLines="1"
+                android:layout_height="wrap_content" android:hint="USER ID"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small" />
+            <EditText
+                android:id="@+id/registerPassword"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small" />
+            <!-- Error message -->
+            <Button
+                android:id="@+id/btnRegister"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dip"
+                android:background="#ff6347"
+                android:text="@string/btnRegister"
+                android:textColor="#fff"
+                />
+        </LinearLayout>
+
+    </ScrollView>
+
+</FrameLayout>

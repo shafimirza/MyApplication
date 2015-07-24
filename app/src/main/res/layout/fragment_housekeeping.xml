@@ -1,0 +1,16 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.econolodge.econolodgeapp3.HousekeepingFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <ListView
+        android:id="@+id/hklistview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context="com.econolodge.econolodgeapp3.Rooms"
+        android:transcriptMode="normal"
+
+        android:fastScrollEnabled="false"/>
+
+</FrameLayout>
